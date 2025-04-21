@@ -180,8 +180,118 @@ body{
 
 .content img{
     width: 400px;
-    margin: 0px 80px;
+    margin: 0px 50px 0px 110px;
 }
+
+.main_form{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+
+    padding: 20px 0px;
+}
+
+.main_form form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.main_form .form_item{
+    position: relative;
+}
+
+.main_form h2{
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.main_form .register_txtbox{
+    width: 360px;
+    padding: 15px 40px;
+
+    background-color: #F2F2F2;
+    border: 2px solid #D4D4D4;
+    border-radius: 10px;
+
+    font-size: 16px;
+}
+
+.main_form .register_txtbox:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px #F2F2F2 inset !important;
+    box-shadow: 0 0 0 1000px #F2F2F2 inset !important;
+    -webkit-text-fill-color: #000 !important; /* 文字顏色可自訂 */
+}
+
+.form_item i:first-child{
+    position: absolute;
+    top: 16px;
+    left: 15px;
+}
+
+.form_item i:last-child{
+    position: absolute;
+    top: 18px;
+    right: 15px;
+}
+
+.form_preference{
+    display: flex;
+    gap: 4px;
+}
+
+.select-wrap {
+    position: relative;
+    display: inline-block;
+}
+
+.select-wrap::after {
+    content: '▼';
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    font-size: 12px;
+    color: #555;
+}
+
+.form_preference .select-box{
+    appearance: none;
+    cursor: pointer;
+    padding: 10px 30px 10px 20px;
+
+    background-color: #F2F2F2;
+    border: 2px solid #D4D4D4;
+    border-radius: 10px;
+
+    font-size: 16px;
+}
+
+.main_form .submit_btn{
+    width: 350px;
+    padding: 12px 18px;
+
+    font-size: 14px;
+    color: #FFFFFF;
+
+    border-radius: 100px;
+    font-weight: bold;
+    border: 2px solid transparent;
+    background-color : #333333;
+
+    transition: background-color 0.5s ease;
+}
+
+.submit_btn:hover,
+.submit_btn:active{
+    color: #FFFFFF;
+    background-color: #5B5B5B;
+}
+
 
 /* ----------------------  footer  ------------------------- */
 .footer{
@@ -269,5 +379,7 @@ body{
 }
 
 .footer_right p{
+    color: #939393;
+    font-size: 12px;
     line-height: 1.6;
 }
