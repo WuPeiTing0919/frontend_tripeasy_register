@@ -5,16 +5,13 @@
 }
 
 body {
+    height: 100%;
     font-family: Verdana, sans-serif;
+    background-image:url("../img/background.png");
 }
 
 a {
     text-decoration: none;
-}
-
-body{
-    height: 100%;
-    background-image:url("../img/background.png");
 }
 
 .wrap{
@@ -24,8 +21,13 @@ body{
 }
 
 .container {
-    width: 1296px;
+    max-width: 1296px;
     margin: 0 auto;
+    width: 100%;
+}
+
+.content{
+    flex: 1;
 }
 
 /* ----------------------  header  ------------------------- */
@@ -48,7 +50,8 @@ body{
 }
 
 .navbar_left h1 img{
-    width: 138px;
+    width: 100%;
+    max-width: 138px;
 }
 
 .navbar_left .search_txtbox{
@@ -109,6 +112,8 @@ body{
     border-radius: 40px;
 
     cursor: pointer;
+
+    transition: background-color 0.5s ease;
 }
 
 .lang_toggle .active{    
@@ -168,18 +173,17 @@ body{
 }
 
 /* ----------------------  content  ------------------------- */
-.content{
-    flex: 1;
-}
-
 .content_container{
     display: flex;
+    align-items: center;
     gap: 200px;
+    
     padding: 40px 0px;
 }
 
 .content img{
-    width: 400px;
+    width: 100%;
+    max-width: 450px;
     margin: 0px 50px 0px 110px;
 }
 
@@ -196,7 +200,6 @@ body{
     display: flex;
     flex-direction: column;
     gap: 15px;
-    align-items: center;
 }
 
 .main_form .form_item{
@@ -236,6 +239,8 @@ body{
     position: absolute;
     top: 18px;
     right: 15px;
+
+    cursor: pointer;
 }
 
 .form_preference{
@@ -271,9 +276,21 @@ body{
     font-size: 16px;
 }
 
+.select-box option:disabled{
+    color: #D4D4D4;
+}
+
+.main_form .error_msg{
+    font-weight: bold;
+    color: #F48282;
+
+    visibility: hidden;
+}
+
 .main_form .submit_btn{
     width: 350px;
     padding: 12px 18px;
+    margin-top: 35px;
 
     font-size: 14px;
     color: #FFFFFF;
@@ -284,6 +301,8 @@ body{
     background-color : #333333;
 
     transition: background-color 0.5s ease;
+
+    cursor: pointer;
 }
 
 .submit_btn:hover,
@@ -305,7 +324,8 @@ body{
 }
 
 .footer_left img{
-    width: 160px;
+    width: 100%;
+    max-width: 160px;
 }
 
 .footer_left .contact_item{
