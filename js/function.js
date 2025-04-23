@@ -134,10 +134,10 @@ export function validatePassword(passwordTxt,errorTxt) {
     return false;
   }
   
-  // 驗證下拉式選單事件
-  export function checkSelections(selects,errorTxt){
+// 驗證下拉式選單事件
+export function checkSelections(selects,errorTxt){
     const allSelected = Array.from(selects).every(select => select.value !== "");
-    
+
     if (allSelected) {
         errorTxt.classList.remove("visibility");
         return false;
@@ -146,5 +146,5 @@ export function validatePassword(passwordTxt,errorTxt) {
         errorTxt.textContent = "「偏好設定」欄位請選擇完整，謝謝。";
         return true;
     } 
-  }
+}
   
