@@ -36,6 +36,7 @@ signUpBtn.addEventListener('click', e=> {
     if(func.validateName(signUpName,error_msg)) return;
     if(func.validateEmail(signUpEmail,error_msg)) return;
     if(func.validatePassword(signUpPwd,error_msg)) return;
+    if(func.checkSelections(selects,error_msg)) return;
 
 });
 

@@ -31,6 +31,7 @@ export function passwordShow(pwdBtn,eyeBtn){
     }
 }
 
+// 驗證姓名事件
 export function validateName(nameTxt,errorTxt) {
     const trimmed = nameTxt.value.trim();
 
@@ -63,7 +64,7 @@ export function validateName(nameTxt,errorTxt) {
     return false;
 }
   
-
+// 驗證 Email 事件
 export function validateEmail(emailTxt,errorTxt) {
     const trimmed = emailTxt.value.trim();
 
@@ -88,6 +89,7 @@ export function validateEmail(emailTxt,errorTxt) {
     return false;
 }
 
+// 驗證密碼事件
 export function validatePassword(passwordTxt,errorTxt) {
     const trimmed = passwordTxt.value.trim();
   
@@ -132,4 +134,17 @@ export function validatePassword(passwordTxt,errorTxt) {
     return false;
   }
   
+  // 驗證下拉式選單事件
+  export function checkSelections(selects,errorTxt){
+    const allSelected = Array.from(selects).every(select => select.value !== "");
+    
+    if (allSelected) {
+        errorTxt.classList.remove("visibility");
+        return false;
+    } else {
+        errorTxt.classList.add("visibility");
+        errorTxt.textContent = "「偏好設定」欄位請選擇完整，謝謝。";
+        return true;
+    } 
+  }
   
