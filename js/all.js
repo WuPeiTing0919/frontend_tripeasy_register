@@ -1,4 +1,5 @@
 import * as func from './function.js';
+import * as api from './api.js';
 
 const lang_toggle = document.querySelector('.lang_toggle');
 const selects = document.querySelectorAll('.select-box');
@@ -38,5 +39,12 @@ signUpBtn.addEventListener('click', e=> {
     if(func.validatePassword(signUpPwd,error_msg)) return;
     if(func.checkSelections(selects,error_msg)) return;
 
+    const selectedValues = Array.from(selects).map(sel => sel.value);
+    api.signUpAPI(
+        signUpName.value.trim(),
+        signUpEmail.value.trim(),
+        signUpPwd.value.trim(),
+        [1,2,3]  //selectedValues
+    );
 });
 
